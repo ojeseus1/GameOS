@@ -1,0 +1,9 @@
+1.You need a NASM Compiler
+
+2.Run this Command for each asm file:
+
+nasm –f bin –o filename.bin filename.asm
+
+3.Put it into a .img:
+
+copy boot.bin+...+kernel.bin vitaxia.img
