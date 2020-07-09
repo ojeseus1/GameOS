@@ -96,7 +96,7 @@ msg_goodbye db "GameOS wird nun neu gestartet, auf Wiedersehen...", 0x0D, 0x0A, 
 
 msg_info_osname db  "Name:    GameOS", 0x0D, 0x0A, 0
 msg_info_version db "Version: 0.00.01a", 0x0D, 0x0A, 0
-msg_info_author db  "Author:  Daniel Pogodda", 0x0D, 0x0A, 0
+msg_info_author db  "Author:  ojeseus1", 0x0D, 0x0A, 0
 msg_info_cmd db     "Befehle: info, reboot", 0x0D, 0x0A, 0
 
 msg_badcommand db "Befehl nicht gefunden.", 0x0D, 0x0A, 0

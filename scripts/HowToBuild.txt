@@ -8,4 +8,4 @@ nasm –f bin –o filename.bin filename.asm
 
 3.Put it into a .img:
 
-copy boot.bin+...+kernel.bin vitaxia.img
+copy boot.bin+...+kernel.bin vitaxia.iso
