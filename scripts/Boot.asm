@@ -77,22 +77,22 @@ print_string:
   mov ah, 0x0E
   int 0x10          					; otherwise, print out the character!
   jmp print_string
-  
+
   .done:
 	ret
- 
+
 ; read kernel from floppy disk
 load_kernel:
   mov dl, [bootdrive] 					; select boot drive
   xor ax, ax         					; mov ax, 0  => function "reset"
-  int 0x13          
+  int 0x13
   jc load_kernel     					; trouble? try again
 
 load_kernel1:
-  mov ax, 0x1000    
+  mov ax, 0x1000
   mov es, ax         					; ES:BX = 0x10000
   xor bx, bx         					; mov bx, 0
- 
+
   ; set parameters for reading function
   ; 8-Bit-wise for better overview
   mov ax, 0x020A         				; function "read", read 5 sectors
@@ -104,7 +104,7 @@ load_kernel1:
 
   ; show loading message
   mov si, msg_load
-  call print_string 
+  call print_string
   retn
 
   times 512-($-$$)-2 db 0				; Dateilänge: 512 Bytes

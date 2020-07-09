@@ -37,7 +37,7 @@
 mov ax, 0x1000 							; Segmentregister updaten
 mov ds, ax
 mov es, ax
- 
+
 kernelstart:
   mov si, msg_welcome
   call print_string   					; Schicke Bootmessage :)
@@ -52,35 +52,35 @@ kernelloop:
   mov si, buffer
   cmp byte [si], 0  					; blank line?
   je kernelloop           				; yes, ignore it
-  
+
   mov di, cmd_info  					; "info" command
   call compare_string
   jz .info
-  
+
   mov si, buffer
   mov di, cmd_reboot  					; "reboot" command
   call compare_string
   jz .reboot
-  
+
   mov si, msg_badcommand
-  call print_string 
-  jmp kernelloop  
+  call print_string
+  jmp kernelloop
   
   .info:
   	mov si, msg_info_osname
   	call print_string
-  
+
   	mov si, msg_info_version
   	call print_string
-  	
+
   	mov si, msg_info_author
   	call print_string
-  	
+
   	mov si, msg_info_cmd
   	call print_string
 
   	jmp kernelloop						; Springe zurück auf kernelloop
-  	
+
   .reboot:
  	call reboot
  
@@ -193,13 +193,13 @@ compare_string:
     inc si     							; increment SI
     jmp .loop  							; looooop!
 
-  .done: 	
+  .done:
     ret
 
 reboot:
   mov si, msg_goodbye
   call print_string
   jmp 0xffff:0x0000
-  
+
 shutdown:
 ; tba...
