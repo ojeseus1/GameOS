@@ -1,6 +1,6 @@
 ; ///////////////////////////////////////////////////
 ; ---------------------------------------------------
-; // GARNIX - Operating System 
+; // GameOS - Operating System 
 ; // but more than nothing
 ; ---------------------------------------------------
 ; // Version:	0.00.01b
@@ -31,7 +31,7 @@
 ;	; Kommentar 		Platziert ein Kommentar 
 
 ; -----------------------------------------
-; GARNIX Bootloader
+; GameOS Bootloader
 ; -----------------------------------------
 
 org 0x7C00  							; set up start address 
@@ -59,14 +59,14 @@ start:
   jmp 0x1000:0x0000
 
 ; -------------------------------------------------
-; GARNIX Variablen
+; GameOS Variablen
 ; -------------------------------------------------
 
 bootdrive db 0      					; boot drive
-msg_load db "GARNIX wird geladen...", 0x0D, 0x0A, 0
+msg_load db "GameOS wird geladen...", 0x0D, 0x0A, 0
 
 ; -------------------------------------------------
-; GARNIX Funktionen
+; GameOS Funktionen
 ; -------------------------------------------------
  
 ; Stringausgabe

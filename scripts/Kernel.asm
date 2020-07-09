@@ -1,10 +1,10 @@
 ; ///////////////////////////////////////////////////
 ; ---------------------------------------------------
-; // GARNIX - Operating System 
+; // GameOS - Operating System 
 ; // but more than nothing
 ; ---------------------------------------------------
 ; // Version:	0.00.01b
-; // Author: 	Ueberdosis
+; // Author: 	ojeseus1
 ; ---------------------------------------------------
 ; ///////////////////////////////////////////////////
 
@@ -31,7 +31,7 @@
 ;	; Kommentar 		Platziert ein Kommentar 
 
 ; ---------------------------------------------------
-; GARNIX Kernel
+; GameOS Kernel
 ; ---------------------------------------------------
  
 mov ax, 0x1000 							; Segmentregister updaten
@@ -85,16 +85,16 @@ kernelloop:
  	call reboot
  
 ; -------------------------------------------------
-; GARNIX Variablen
+; GameOS Variablen
 ; -------------------------------------------------
 
 ; db = Define Byte
 
 ; Bildschirmtextausgaben
-msg_welcome db "Herzlich Willkommen zu GARNIX...", 0x0D, 0x0A, 0
-msg_goodbye db "GARNIX wird nun neu gestartet, auf Wiedersehen...", 0x0D, 0x0A, 0
+msg_welcome db "Herzlich Willkommen zu GameOS...", 0x0D, 0x0A, 0
+msg_goodbye db "GameOS wird nun neu gestartet, auf Wiedersehen...", 0x0D, 0x0A, 0
 
-msg_info_osname db  "Name:    GARNIX", 0x0D, 0x0A, 0
+msg_info_osname db  "Name:    GameOS", 0x0D, 0x0A, 0
 msg_info_version db "Version: 0.00.01a", 0x0D, 0x0A, 0
 msg_info_author db  "Author:  Daniel Pogodda", 0x0D, 0x0A, 0
 msg_info_cmd db     "Befehle: info, reboot", 0x0D, 0x0A, 0
@@ -111,7 +111,7 @@ cmd_reboot db "reboot", 0
 buffer times 32 db 0
 
 ; -------------------------------------------------
-; GARNIX Funktionen
+; GameOS Funktionen
 ; -------------------------------------------------
 
 ; Stringausgabe
