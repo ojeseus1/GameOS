@@ -1,3 +1,5 @@
+Discord Server: https://discord.gg/m3sWav
+
 1.You need a NASM Compiler
 
 2.Run this Command for each asm file:
